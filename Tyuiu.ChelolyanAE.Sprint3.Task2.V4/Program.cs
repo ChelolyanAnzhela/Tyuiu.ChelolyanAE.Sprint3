@@ -31,6 +31,7 @@ namespace Tyuiu.ChelolyanAE.Sprint3.Task2.V4
             Console.WriteLine("***************************************************************************");
             Console.WriteLine($"Произведение ряда {res}");
             Console.ReadKey();
+
         }
     }
 }
