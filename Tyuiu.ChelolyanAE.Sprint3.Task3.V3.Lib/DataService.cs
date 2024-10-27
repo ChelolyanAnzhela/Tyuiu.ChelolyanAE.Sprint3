@@ -6,28 +6,28 @@ namespace Tyuiu.ChelolyanAE.Sprint3.Task3.V3.Lib
     {
         public int GetMinCharCount(string value, char item)
         {
-            int minCount = int.MaxValue;
-            int count = 0;
-            foreach (char chr in value)
+            char Last = ' ';
+            int minCount = 99999999;
+            int currentCount = 0;
+
+            foreach (char ch in value)
             {
-                if (chr == item)
+                if (ch == item && Last == ch)
                 {
-                    count++;
+                    currentCount += 2;
                 }
                 else
                 {
-                    if (count > 0)
-                    { 
-                        minCount = Math.Min(minCount, count);
-                        count = 0;
+                    if (currentCount > 0)
+                    {
+                        minCount = Math.Min(minCount, currentCount);
+                        currentCount = 0;
                     }
                 }
+                Last = ch;
             }
-            if (count > 0)
-            {
-                minCount = Math.Min(minCount, count);
-            }
-            return (minCount == int.MaxValue) ? 0 : minCount; ;
+            return minCount;
+            
         }
     }
 }

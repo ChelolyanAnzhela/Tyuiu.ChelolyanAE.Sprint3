@@ -10,9 +10,9 @@ namespace Tyuiu.ChelolyanAE.Sprint3.Task3.V3.Test
         {
             DataService ds = new DataService();
             string str = "cvbmzff orffgtrr dkfvfffdr";
-            char chr = 'f';
-            int res = ds.GetMinCharCount(str, chr);
-            int wait = 1;
+            char item = 'f';
+            int res = ds.GetMinCharCount(str, item);
+            int wait = 2;
             Assert.AreEqual(wait, res);
         }
     }
